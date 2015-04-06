@@ -30,7 +30,12 @@ function! unite#sources#symbol#define()
     return s:unite_symbol
 endfunction
 
-let s:unite_symbol = {'name' : 'symbol', 'default_action' : 'insert'}
+let s:unite_symbol = {
+\   'name' : 'symbol',
+\   'default_action' : 'insert',
+\   'regtype' : 'V'
+\}
+
 let s:symbol_dict = {
 \   "\u220e" : 'qed END-OF-PROOF',
 \   "\u2218" : 'comp RING-OPERATOR',
