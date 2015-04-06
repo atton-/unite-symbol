@@ -30,7 +30,7 @@ function! unite#sources#symbol#define()
     return s:unite_symbol
 endfunction
 
-let s:unite_symbol = {'name' : 'symbol'}
+let s:unite_symbol = {'name' : 'symbol', 'default_action' : 'insert'}
 let s:symbol_dict = {
 \   "\u220e" : 'qed END-OF-PROOF',
 \   "\u2218" : 'comp RING-OPERATOR',
@@ -42,9 +42,9 @@ let s:symbol_dict = {
 
 let s:symbol_to_unite_element = '{
 \       "word": v:key . " : " . v:val,
+\       "action__text": v:key,
 \       "source": "symbol",
-\       "kind": "command",
-\       "action__command": "call unite#kinds#common#insert_word(\"" . v:key . "\")"
+\       "kind": "common",
 \   }'
 let s:symbol_details = values(map(s:symbol_dict, s:symbol_to_unite_element))
 
