@@ -41,6 +41,7 @@ let s:symbol_dict = {
 \   "\u2218" : 'comp RING-OPERATOR',
 \   "\u2219" : '. BULLET-OPERATOR',
 \   "\u2261" : '== equivalence equiv IDENTICAL-TO',
+\   "\u22a4" : 'unit entails DOWN TACK',
 \   "\u27e8" : '< langle MATHEMATICAL-LEFT-ANGLE-BRACKET',
 \   "\u27e9" : '> rangle MATHEMATICAL-RIGHT-ANGLE-BRACKET',
 \}
